@@ -62,13 +62,18 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
    // Send UTF8 Headers
    header("Content-Type: text/html; charset=UTF-8");
 
+
+   //alterações tiago - cabeçalho para html5
    // Start the page
-   echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" '.
-         '"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">'."\n";
-   echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">';
+  //  echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" '.
+  //        '"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">'."\n";
+   echo '<!DOCTYPE html>';
+  //  echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">';
    echo '<head><title>'.__('GLPI - Authentication').'</title>'."\n";
    echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'."\n";
    echo '<meta http-equiv="Content-Script-Type" content="text/javascript"/>'."\n";
+   echo '<link rel="stylesheet" href="'.$CFG_GLPI["root_doc"].'/css/css/bootstrap.css" />';
+   echo '<link rel="stylesheet" href="'.$CFG_GLPI["root_doc"].'/css/css/min.css" />';
    echo '<link rel="shortcut icon" type="images/x-icon" href="'.$CFG_GLPI["root_doc"].
           '/pics/favicon.ico" />';
 
@@ -83,59 +88,99 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
 //    echo "<script type='text/javascript'><!--document.getElementById('var_login_name').focus();-->".
 //          "</script>";
 
-   echo "</head>";
-
    echo "<body>";
-   echo "<div id='firstboxlogin'>";
-   echo "<div id='logo_login'></div>";
-   echo "<div id='text-login'>";
-   echo nl2br(Toolbox::unclean_html_cross_side_scripting_deep($CFG_GLPI['text_login']));
+  //  echo "<div class='container'>";
+  //  echo "<div class='row'>";
+  //  echo   "<div class='col-lg-8 col-lg-offset-2'>";
+  //  echo    "<div style='margin-top:10%;'>";
+  //  echo    "<div class='panel panel-info' >";
+  //  echo	  "<div class='header'>";
+  //  echo	  "<div class='panel-heading'> "  ;
+  //  echo    "<div class='panel-title'>"  ;
+  //  echo    "<div class='row'>";
+  //  echo	  "<div class='col-md-3' id='logo_login'></div>";
+  //  echo    "<div class='col-md-9'><h1>Universidade Federal de São Paulo</h1><h4>Sistema de Suporte</h4></div>";
+  //  echo    "</div>";
+	//  echo    "</div>";
+  //  echo    "</div>";
+  //  echo    "</div>";
+  //  echo    "</div";
+  //  echo    "</div";
+  //  echo    "</div";
+  //  echo    "</div";
+  //  echo    "</div";
+  echo "<head>";
+    echo "<div class='container'>";
+     echo "<div class='row'>";
+      echo "<div class='col-lg-8 col-lg-offset-2'>";
+        echo "<div style='margin-top:10%;'>";
+          echo "<div class='panel panel-info'>";
+            echo "<div class='header'>";
+              echo "<div class='panel-heading'>";
+                echo "<div class='panel-title'>";
+                  echo "<div class='row'>";
+                    echo "<div class='col-md-3'><img  src='".$CFG_GLPI["root_doc"]."/pics/login_logo_glpi.png'></img></div>";
+                    echo "<div class='col-md-9'><h1> Universidade Federal de São Paulo</h1><h4>Sistema de Suporte - DTI Guarulhos</h4></div>";
+                  echo "</div>";
+                echo "</div>";
+              echo "</div>";
+            echo "</div>";
+          echo "</div>";
+        echo "</div>";
+      echo "</div>";
+     echo "</div>";
+    echo "</div>";
+
+   echo    "<div class='container'>";
+   //echo "<div id='logo_login'></div>";
+   //echo "<div id='text-login'>";
+   //echo nl2br(Toolbox::unclean_html_cross_side_scripting_deep($CFG_GLPI['text_login']));
    echo "</div>";
 
-   echo "<div id='boxlogin'>";
-   echo "<form action='".$CFG_GLPI["root_doc"]."/front/login.php' method='post'>";
-
-
-   echo "<fieldset>";
+   echo "<div class='row'>";
+   echo "<div>";
+   echo "<form action='".$CFG_GLPI["root_doc"]."/front/login.php' method='post' class='form-horizontal'>";
+   echo "<fieldset class='form-group'>";
    // Other CAS
    if (isset($_GET["noAUTO"])) {
-      echo "<input type='hidden' name='noAUTO' value='1' />";
+      echo "<input type='hidden' name='noAUTO' value='1' class='form-group'/>";
    }
    // redirect to ticket
    if (isset($_GET["redirect"])) {
       Toolbox::manageRedirect($_GET["redirect"]);
       echo '<input type="hidden" name="redirect" value="'.$_GET['redirect'].'"/>';
    }
-   echo '<legend>'.__('Authentication').'</legend>';
-   echo '<div class="loginrow"><span class="loginlabel"><label>'.__('Login').'</label></span>';
-   echo '<span class="loginformw">';
+   //echo '<legend>'.__('Authentication').'</legend>';
+   echo '<div class="form-group"><span class="loginlabel"><label>'.__('Login').'</label></span>';
+   echo '<span class="form-group">';
    echo '<input type="text" name="login_name" id="login_name" required="required" />';
    echo '</span></div>';
 
-   echo '<div class="loginrow"><span class="loginlabel"><label>'.__('Password').'</label></span>';
-   echo '<span class="loginformw">';
+   echo '<div class="form-group"><span class="loginlabel"><label>'.__('Password').'</label></span>';
+   echo '<span class="form-group">';
    echo '<input type="password" name="login_password" id="login_password" required="required" />';
    echo '</span></div>';
 
    echo "</fieldset>";
-   echo '<p><span>';
-   echo '<input type="submit" name="submit" value="'._sx('button','Post').'" class="submit" />';
-   echo '</span></p>';
-    if ($CFG_GLPI["use_mailing"]
-       && countElementsInTable('glpi_notifications',
-                               "`itemtype`='User'
-                                AND `event`='passwordforget'
-                                AND `is_active`=1")) {
-      echo '<div id="forget"><a href="front/lostpassword.php?lostpassword=1">'.
-             __('Forgotten password?').'</a></div>';
-   }
+   //echo '<p><span>';
+   echo '<input type="submit" name="submit" value="'._sx('button','Post').'" class="btn btn-success" />';
+  // echo '</span></p>';
+  //   if ($CFG_GLPI["use_mailing"]
+  //      && countElementsInTable('glpi_notifications',
+  //                              "`itemtype`='User'
+  //                               AND `event`='passwordforget'
+  //                               AND `is_active`=1")) {
+  //     echo '<div id="forget"><a href="front/lostpassword.php?lostpassword=1">'.
+  //            __('Forgotten password?').'</a></div>';
+  //  }
    Html::closeForm();
 
    echo "<script type='text/javascript' >\n";
    echo "document.getElementById('login_name').focus();";
    echo "</script>";
 
-   echo "</div>";  // end login box
+   echo "</div>";
+   echo "</div>";// end login box
 
 
    echo "<div class='error'>";
@@ -178,7 +223,7 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
    }
    echo "<div id='footer-login'>";
    echo "<a href='http://glpi-project.org/' title='Powered By Indepnet'>";
-   echo 'GLPI version '.(isset($CFG_GLPI["version"])?$CFG_GLPI["version"]:"").
+   echo 'GLPI Guarulhos '.(isset($CFG_GLPI["version"])?$CFG_GLPI["version"]:"").
         ' Copyright (C) 2003-'.date("Y").' INDEPNET Development Team.';
    echo "</a></div>";
 
