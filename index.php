@@ -72,8 +72,11 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
    echo '<head><title>'.__('GLPI - Authentication').'</title>'."\n";
    echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'."\n";
    echo '<meta http-equiv="Content-Script-Type" content="text/javascript"/>'."\n";
+
+   //bootstrap
    echo '<link rel="stylesheet" href="'.$CFG_GLPI["root_doc"].'/css/css/bootstrap.css" />';
    echo '<link rel="stylesheet" href="'.$CFG_GLPI["root_doc"].'/css/css/min.css" />';
+
    echo '<link rel="shortcut icon" type="images/x-icon" href="'.$CFG_GLPI["root_doc"].
           '/pics/favicon.ico" />';
 
@@ -87,29 +90,9 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
    echo "<![endif]-->";
 //    echo "<script type='text/javascript'><!--document.getElementById('var_login_name').focus();-->".
 //          "</script>";
+   echo "</head>";
 
    echo "<body>";
-  //  echo "<div class='container'>";
-  //  echo "<div class='row'>";
-  //  echo   "<div class='col-lg-8 col-lg-offset-2'>";
-  //  echo    "<div style='margin-top:10%;'>";
-  //  echo    "<div class='panel panel-info' >";
-  //  echo	  "<div class='header'>";
-  //  echo	  "<div class='panel-heading'> "  ;
-  //  echo    "<div class='panel-title'>"  ;
-  //  echo    "<div class='row'>";
-  //  echo	  "<div class='col-md-3' id='logo_login'></div>";
-  //  echo    "<div class='col-md-9'><h1>Universidade Federal de São Paulo</h1><h4>Sistema de Suporte</h4></div>";
-  //  echo    "</div>";
-	//  echo    "</div>";
-  //  echo    "</div>";
-  //  echo    "</div>";
-  //  echo    "</div";
-  //  echo    "</div";
-  //  echo    "</div";
-  //  echo    "</div";
-  //  echo    "</div";
-  echo "<head>";
     echo "<div class='container'>";
      echo "<div class='row'>";
       echo "<div class='col-lg-8 col-lg-offset-2'>";
@@ -129,58 +112,53 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
         echo "</div>";
       echo "</div>";
      echo "</div>";
-    echo "</div>";
 
-   echo    "<div class='container'>";
-   //echo "<div id='logo_login'></div>";
-   //echo "<div id='text-login'>";
-   //echo nl2br(Toolbox::unclean_html_cross_side_scripting_deep($CFG_GLPI['text_login']));
-   echo "</div>";
-
-   echo "<div class='row'>";
-   echo "<div>";
    echo "<form action='".$CFG_GLPI["root_doc"]."/front/login.php' method='post' class='form-horizontal'>";
-   echo "<fieldset class='form-group'>";
-   // Other CAS
-   if (isset($_GET["noAUTO"])) {
-      echo "<input type='hidden' name='noAUTO' value='1' class='form-group'/>";
-   }
-   // redirect to ticket
-   if (isset($_GET["redirect"])) {
-      Toolbox::manageRedirect($_GET["redirect"]);
-      echo '<input type="hidden" name="redirect" value="'.$_GET['redirect'].'"/>';
-   }
-   //echo '<legend>'.__('Authentication').'</legend>';
-   echo '<div class="form-group"><span class="loginlabel"><label>'.__('Login').'</label></span>';
-   echo '<span class="form-group">';
-   echo '<input type="text" name="login_name" id="login_name" required="required" />';
-   echo '</span></div>';
+     // Other CAS
+     if (isset($_GET["noAUTO"])) {
+        echo "<input type='hidden' name='noAUTO' value='1'/>";
+     }
+     // redirect to ticket
+     if (isset($_GET["redirect"])) {
+        Toolbox::manageRedirect($_GET["redirect"]);
+        echo '<input type="hidden" name="redirect" value="'.$_GET['redirect'].'"/>';
+     }
+     echo "<div class='form-group'>";
+         echo "<label class='col-sm-4 control-label'>".__('Login')."</label>";
+         echo "<div class='col-sm-4'>";
+            echo "<input class='form-control' type='text' name='login_name' id='login_name' required='required' placeholder='Digite seu login da intranet...'/>";
+         echo "</div>";
+     echo "</div>";
 
-   echo '<div class="form-group"><span class="loginlabel"><label>'.__('Password').'</label></span>';
-   echo '<span class="form-group">';
-   echo '<input type="password" name="login_password" id="login_password" required="required" />';
-   echo '</span></div>';
+     echo "<div class='form-group'>";
+       echo "<label class='col-sm-4 control-label'>".__('Password')."</label>";
+       echo "<div class='col-sm-4'>";
+          echo "<input class='form-control' type='password' name='login_password' id='login_password' required='required' placeholder='senha'/>";
+       echo "</div>";
+     echo "</div>";
 
-   echo "</fieldset>";
-   //echo '<p><span>';
-   echo '<input type="submit" name="submit" value="'._sx('button','Post').'" class="btn btn-success" />';
-  // echo '</span></p>';
-  //   if ($CFG_GLPI["use_mailing"]
-  //      && countElementsInTable('glpi_notifications',
-  //                              "`itemtype`='User'
-  //                               AND `event`='passwordforget'
-  //                               AND `is_active`=1")) {
-  //     echo '<div id="forget"><a href="front/lostpassword.php?lostpassword=1">'.
-  //            __('Forgotten password?').'</a></div>';
-  //  }
+     echo "<div class='row'>";
+          echo "<button class='btn btn-success col-md-2 col-md-offset-5' type='submit'>".'Entrar'."</button>";
+     echo "</div>";
+    // echo '</span></p>';
+    //   if ($CFG_GLPI["use_mailing"]
+    //      && countElementsInTable('glpi_notifications',
+    //                              "`itemtype`='User'
+    //                               AND `event`='passwordforget'
+    //                               AND `is_active`=1")) {
+    //     echo '<div id="forget"><a href="front/lostpassword.php?lostpassword=1">'.
+    //            __('Forgotten password?').'</a></div>';
+    //  }
+
    Html::closeForm();
+   echo "</form>";
 
    echo "<script type='text/javascript' >\n";
    echo "document.getElementById('login_name').focus();";
    echo "</script>";
 
-   echo "</div>";
-   echo "</div>";// end login box
+   //echo "</div>";
+   //echo "</div>";// end login box
 
 
    echo "<div class='error'>";
@@ -207,7 +185,7 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
    echo "</div>";
 
 
-   echo "</div>"; // end contenu login
+  // echo "</div>"; // end contenu login
 
       // Display FAQ is enable
    if ($CFG_GLPI["use_public_faq"]) {
@@ -232,6 +210,6 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
 if (!GLPI_DEMO_MODE) {
    CronTask::callCronForce();
 }
-
+echo "</div>";
 echo "</body></html>";
 ?>

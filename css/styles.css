@@ -38,7 +38,7 @@ body {
    margin: 0;
    padding: 0;
    background:  #f8f7f3 repeat-x;
-   
+
 }
 
 ul, li, dt, dl, dd, form, img, input {
@@ -133,7 +133,7 @@ sup {
 }
 
 
-.red { 
+.red {
    color:red;
 }
 
@@ -187,8 +187,8 @@ hr {
 /* ################--------------- Tabs ---------------#################### */
 
 .alltab {
-   font-size:14px; 
-   text-align:center; 
+   font-size:14px;
+   text-align:center;
    padding: 10px;
    font-weight: bold;
 }
@@ -213,7 +213,7 @@ hr {
    font-size: 12px;
    margin:0;
    margin-bottom:5px;
-   padding:0; 
+   padding:0;
 }
 
 /*#page {
@@ -264,7 +264,7 @@ input[type="image"] {
 }
 
 input[type="file"] {
-   height: 22px;	
+   height: 22px;
    border: 1px solid #4E6378;
 }
 
@@ -280,7 +280,7 @@ input.submit {
    background-image: -ms-linear-gradient(top, #fddb6f, #ffb94b);
    background-image: -o-linear-gradient(top, #fddb6f, #ffb94b);
    background-image: linear-gradient(top, #fddb6f, #ffb94b);
-   
+
    /* For Internet Explorer 5.5 - 7 */
    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fddb6f, endColorstr=#ffb94b);
    /* For Internet Explorer 8 */
@@ -291,15 +291,15 @@ input.submit {
    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
-   box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+   box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
    border-width: 1px;
    border-style: solid;
    border-color: #d69e31 #e3a037 #d5982d #e3a037
-   
+
 }
 
 input.submit:hover {
-  
+
    border: 1px inset #888888;
    background-color: #fddb6f;
    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb94b), to(#fddb6f));
@@ -314,7 +314,7 @@ input.submit:hover {
 input.save {
 
 
-} 
+}
 
 span.vsubmit, a.vsubmit {
    padding: 2px;
@@ -341,11 +341,11 @@ span.vsubmit, a.vsubmit {
    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
-   box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+   box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
    border-width: 1px;
    border-style: solid;
    border-color: #d69e31 #e3a037 #d5982d #e3a037
-   
+
 }
 
 a.vsubmit:hover {
@@ -492,7 +492,7 @@ td { }
 
 
 .tab_cadre_fixe img {
-   vertical-align: middle;	
+   vertical-align: middle;
 }
 
 .tab_cadrehov {
@@ -519,7 +519,7 @@ td { }
    -webkit-border-radius: 4px;
    -o-border-radius: 4px;
    padding: 2px;
-   /*background:  url("../pics/fond_th.png") repeat-x; 
+   /*background:  url("../pics/fond_th.png") repeat-x;
    border-bottom:1px solid #cccccc;
    padding: 2px;*/
 }
@@ -571,7 +571,7 @@ td { }
    padding: 0px;
    margin: 0px;
    border: 0px;
-   border-collapse:collapse;   
+   border-collapse:collapse;
 }
 
 .tab_format td {
@@ -644,7 +644,7 @@ td.htmltable_upper_separation_cell {
     border-top: dashed 1px #a0a0a0;
 }
 
-td.nopadding { 
+td.nopadding {
    padding:0;
 }
 
@@ -668,7 +668,7 @@ td.rotate {
   <!--[if lte IE 8]>
    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
   <![endif]-->
-  
+
 }
 
 /* ################--------------- Pager  ---------------#################### */
@@ -698,7 +698,7 @@ td.rotate {
    font-weight: bold;
    background-color: #fccc6f;
    text-align: center;
-   background:  url("../pics/fond_th.png") repeat-x; 
+   background:  url("../pics/fond_th.png") repeat-x;
 }
 
 
@@ -715,8 +715,8 @@ td.rotate {
 
 .showplan {
    font-weight: bold;
-   text-decoration: none; 
-   color : #659900; 
+   text-decoration: none;
+   color : #659900;
    cursor:pointer;
 }
 
@@ -739,7 +739,7 @@ td.rotate {
    width:72px;
    height:72px;
    position: absolute;
-}  
+}
 .tooltip_picture {
    width:71px;
    height:71px;
@@ -839,36 +839,36 @@ td.rotate {
    cursor:pointer;
 }
 
-.calendrier_mois { 
-   font-family: Verdana, Arial, Sans, sans-serif; 
-   font-size: 10px; 
+.calendrier_mois {
+   font-family: Verdana, Arial, Sans, sans-serif;
+   font-size: 10px;
 }
 
 .calendrier_jour {
-   font-family: arial,helvetica,sans-serif; 
-   font-size: 14px; 
+   font-family: arial,helvetica,sans-serif;
+   font-size: 14px;
    color: black;
 }
 
 .calendrier_case1 {
-   margin-left: 10px; 
-   padding: 2px; 
+   margin-left: 10px;
+   padding: 2px;
    -moz-border-radius: 5px;
    -webkit-border-radius: 5px;
    -o-border-radius: 5px;
-   margin-top: 2px; 
+   margin-top: 2px;
    border: 1px solid #666666;
    background-color: white;
 }
 
 .calendrier_case2 {
-   margin-left: 10px; 
-   padding: 2px; 
+   margin-left: 10px;
+   padding: 2px;
    -moz-border-radius: 5px;
    -webkit-border-radius: 5px;
-   -o-border-radius: 5px; 
+   -o-border-radius: 5px;
    margin-top: 2px;
-   border: 1px solid #cccccc; 
+   border: 1px solid #cccccc;
    background-color: #eeeeee
 }
 
@@ -965,7 +965,7 @@ td.rotate {
 .tdkb_result {
    vertical-align:top;
    text-align:left;
-   width: 33%; 
+   width: 33%;
    padding: 3px 20px 3px 25px;
 }
 
@@ -977,14 +977,14 @@ td.rotate {
 .kb_resume {
    text-align:left;
    font-size: 9px;
-   line-height: 10px; 
+   line-height: 10px;
    clear: both;
    padding: 5px 0 10px 25px;
 }
 
 .tdkb {
    text-align:left;
-   font-size:10px; 
+   font-size:10px;
    color:#aaaaaa;
 }
 
@@ -996,8 +996,8 @@ td.rotate {
 }
 
 .baskb_right {
-   position:absolute; 
-   right:0; 
+   position:absolute;
+   right:0;
    margin-right:5px;
 }
 
@@ -1184,7 +1184,7 @@ div#tabcontent {
 /* ################--------------- box (redirect and other)  ---------------#################### */
 
 .box {
-   margin: 0 auto; 
+   margin: 0 auto;
    width:700px;
    text-align:center;
 
@@ -1291,12 +1291,12 @@ div#tabcontent {
    margin:0;
    width: 107px;
    height: 43px;
-   background: url(../pics/login_logo_glpi.png)  no-repeat; 
+   background: url(../pics/login_logo_glpi.png)  no-repeat;
 }
 
 
 #text-login {
-   
+
    font-size: 13px;
    margin-bottom:10px;
    max-height: 50px;
@@ -1316,7 +1316,7 @@ div#tabcontent {
 
 
 #bloc {
-   
+
    width:760px;
    margin:0 auto;
    text-align:left;
@@ -1347,7 +1347,7 @@ div#tabcontent {
    margin:0;
    width: 107px;
    height: 43px;
-   background: url(../pics/login_logo_glpi.png)  no-repeat; 
+   background: url(../pics/login_logo_glpi.png)  no-repeat;
 }
 
 #boxlogin {
@@ -1452,7 +1452,7 @@ div#tabcontent {
 }
 
 .error {
-   color: red; 
+   color: red;
    margin-top:20px;
    text-align:center;
 }
@@ -1499,7 +1499,7 @@ div#c_preference {
    margin-right: 5px;
    position: relative;
    top: 4px;
-   font-size: 0.9em;	
+   font-size: 0.9em;
    z-index:900;
 }
 
@@ -1612,9 +1612,9 @@ ul#menu ul.ssmenu {
    border-radius: 4px;
    -moz-box-shadow: 0px 0px 4px #000000;
    -webkit-box-shadow: 0px 0px 4px #000000;
-   box-shadow: 0px 0px 4px #000000;	
-   
-   
+   box-shadow: 0px 0px 4px #000000;
+
+
 }
 
 ul#menu ul li {
@@ -1623,7 +1623,7 @@ ul#menu ul li {
    border-bottom: 1px solid #CC9900;
    line-height: 20px;
    font-size: 0.9em;
-   padding: 5px 5px 5px 5px;	
+   padding: 5px 5px 5px 5px;
 }
 
 
@@ -1643,7 +1643,7 @@ ul#menu ul li a {
 
 ul#menu ul li a:hover {
    background: #D0D99D;
-   
+
 }
 
 ul#menu li#menu1 {
@@ -1766,7 +1766,7 @@ div#c_ssmenu2 {
    /*background: url("../pics/fd_nav3.png") 0 0 repeat-x;*/
    height: 28px;
    clear: both;
-   font-size: 0.9em; 
+   font-size: 0.9em;
 }
 
 div#c_ssmenu2 ul {
@@ -1795,7 +1795,7 @@ div#c_ssmenu2  a.here {
 div#show_all_menu {
 /*   display: none;*/
 /*   position: absolute;*/
-/*   top:20px;*/ 
+/*   top:20px;*/
 /*   left:5px;*/
    border: 1px solid  #CC9900;
    background: url("../pics/fd_hoverlink.png") 0 0 repeat;
@@ -1834,7 +1834,7 @@ div#show_all_menu a:hover {
 }
 
 div#show_all_menu .tab_bg_1 a {
-   color: #000000!important;	
+   color: #000000!important;
 }
 
 div#show_all_menu .tab_bg_1 a:hover {
@@ -1847,7 +1847,7 @@ div#show_all_menu .tab_bg_1 a:hover {
    margin-top:10px;
    margin-bottom:10px;
    background: url("../pics/fd_footer.png") 0 0 repeat-x;
-   font-size: 9px;	
+   font-size: 9px;
    color :#757575;
    padding: 6px;
    border: 2px solid #cccccc;
@@ -1865,7 +1865,7 @@ div#show_all_menu .tab_bg_1 a:hover {
 }
 
 .copyright {
-   font-size: 9px;	
+   font-size: 9px;
    color :#757575;
 }
 
@@ -1944,14 +1944,14 @@ div#show_all_menu .tab_bg_1 a:hover {
 }
 
 #debug h1, #debugajax h1 {
-   font-size:18px; 
-   text-align:center; 
+   font-size:18px;
+   text-align:center;
    /*background-color:#efefe7;*/
    padding: 5px;
 }
 
 #debug h2, #debugajax h2 {
-   font-size:14px; 
+   font-size:14px;
    padding-left: 10px;
    border-left: 4px solid #FFC65D;
    border-bottom: 2px solid #FFC65D;
