@@ -1,0 +1,45 @@
+@import url(http://fonts.googleapis.com/css?family=Cinzel);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+h1,h2,h3,h4{ font-family: "Cinzel", "Trebuchet MS", Helvetica, sans-serif; }
+.panel-default , .panel-heading,p,a { font-family: "Lato", "Trebuchet MS", Helvetica, sans-serif; font-size:1em; }
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3,h4 {font-size: 1.1em;}
+
+
+
+.header {
+  background-color: #215a36;
+  color: #fff;
+  padding: 2px;
+  border-radius: 5px;
+  border: 1px #efefef;
+
+}
+
+.panel-info {
+    border-color: /*#215a36*/#efefef;
+}
+
+
+.navbar {
+    margin: 0px;
+
+}
+
+/*.navbar-nav > li{
+    background: linear-gradient(to bottom, #7894ae 0%, #164e86 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}*/
+
+.navbar-nav > li > a{
+  /*color: linear-gradient(to bottom, #7894ae 0%, #164e86 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+  color: #fff;
+  text-transform: uppercase;
+  background: ;
+  padding: 5px 20px 5px 20px;
+}
+
+.navbar-nav > li > a:hover{
+  color: #7894ae;
+}
