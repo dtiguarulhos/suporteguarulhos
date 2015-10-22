@@ -1,0 +1,9 @@
+{
+    "type": "sftp",
+    "host": "172.21.160.18",
+    "username": "root",
+    "password": "asustuv4x",
+    "port": 2244,
+    "remotePath": "/var/www/html/glpi",
+    "uploadOnSave": true
+}
